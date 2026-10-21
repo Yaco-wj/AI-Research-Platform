@@ -1,0 +1,45 @@
+[project]
+name = "open-deep-research-backend"
+version = "0.1.0"
+description = "Open Deep Research 平台后端（FastAPI 服务层，与 Agent 严格分层）"
+requires-python = ">=3.10"
+dependencies = [
+    # Web 框架
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "sse-starlette>=2.1",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.3",
+    # 业务数据库（PostgreSQL 业务表）
+    "sqlalchemy[asyncio]>=2.0",
+    "asyncpg>=0.29",
+    "alembic>=1.13",
+    # LangGraph checkpoint（独立于业务数据库）
+    "langgraph-checkpoint-postgres>=3.0",
+    "psycopg[binary,pool]>=3.2",
+    # 环境变量
+    "python-dotenv>=1.0",
+    # 说明：Agent（open_deep_research）由仓库根目录以 editable 方式安装，
+    # 平台层只通过 app/agent_adapter 调用它，因此这里不重复声明 Agent 依赖。
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "httpx>=0.27",
+    "aiosqlite>=0.20",
+]
+
+[build-system]
+requires = ["setuptools>=73.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["app"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+pythonpath = ["."]
+filterwarnings = ["ignore::DeprecationWarning"]
