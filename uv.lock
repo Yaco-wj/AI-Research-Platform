@@ -4502,16 +4502,16 @@ wheels = [
 
 [[package]]
 name = "tavily-python"
-version = "0.7.5"
+version = "0.8.5"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "httpx" },
     { name = "requests" },
     { name = "tiktoken" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/1a/f6/ffbcb3fed5fceffff2ca934d06e2a667023ded6964500aadc732c80dde6f/tavily_python-0.7.5.tar.gz", hash = "sha256:f56aac136fbebeb2c8068fd6261aaa15f31d7da5c68e098ef7d6269ad032f842", size = 17186, upload-time = "2025-06-05T23:13:07.061Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/2f/39/3aff85cb3b45cab3ef9578560364b893baa34e79744e99567a825dbadf57/tavily_python-0.8.5.tar.gz", hash = "sha256:1795965c3ffe5654856244d637daa816a4ee947aca57d0588b731c69e75e71fe", size = 35634, upload-time = "2026-10-06T15:11:34.827Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/51/9d/1ec73120c3b8fc52a84bcd51d0028ba9dfa729938abb41b41e4fcb58f263/tavily_python-0.7.5-py3-none-any.whl", hash = "sha256:e64660977c1b96df8c3327e8ff8ed626d5ca3178c52ee167ffa543731642f221", size = 15379, upload-time = "2025-06-05T23:13:05.906Z" },
+    { url = "https://files.pythonhosted.org/packages/2f/c5/fc13567e2a1d3671f51252d44f580bf3ab3c0a6ec90a6553f5c67ba87208/tavily_python-0.8.5-py3-none-any.whl", hash = "sha256:f8d2880f5aa67cf3ee2eb1f7c9336ea50dc331eb1e406688391badb0140599a7", size = 24629, upload-time = "2026-10-06T15:11:33.854Z" },
 ]
 
 [[package]]
